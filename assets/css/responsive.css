@@ -1960,6 +1960,105 @@
   .contact-form textarea.form-control {
     min-height: 120px !important;
   }
+  
+  /* Courses Page Mobile Styles */
+  .courses-area {
+    padding: 30px 15px 60px !important;
+  }
+  
+  .courses-area h1 {
+    font-size: 28px !important;
+  }
+  
+  .single-course-box {
+    height: 200px !important;
+    margin-bottom: 25px !important;
+  }
+  
+  .single-course-box h3 {
+    font-size: 16px !important;
+    padding: 10px !important;
+  }
+  
+  .course-features-area {
+    padding: 60px 15px !important;
+  }
+  
+  .course-features-area .course-content {
+    padding-left: 0 !important;
+    margin-top: 20px;
+  }
+  
+  .course-features-area .course-image {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .course-features-area .course-image img {
+    max-width: 100% !important;
+  }
+  
+  .course-features-area h2 {
+    font-size: 22px !important;
+  }
+  
+  .course-features-area p {
+    font-size: 15px !important;
+  }
+  
+  .course-features-area .course-features li {
+    font-size: 14px !important;
+  }
+  
+  .learning-process-area {
+    padding: 60px 15px !important;
+  }
+  
+  .learning-process-area h2 {
+    font-size: 24px !important;
+  }
+  
+  .learning-process-area .process-step {
+    margin-bottom: 30px !important;
+  }
+  
+  .learning-process-area .step-number {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  .learning-process-area h4 {
+    font-size: 18px !important;
+  }
+  
+  .why-choose-courses-area {
+    padding: 60px 15px !important;
+  }
+  
+  .why-choose-courses-area h2 {
+    font-size: 24px !important;
+  }
+  
+  .why-choose-courses-area .feature-item {
+    margin-bottom: 25px !important;
+  }
+  
+  .why-choose-courses-area .feature-item h4 {
+    font-size: 18px !important;
+  }
+  
+  .why-choose-courses-area .feature-item p {
+    font-size: 14px !important;
+  }
+  
+  .why-choose-courses-area .course-image {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .why-choose-courses-area .course-image img {
+    max-width: 100% !important;
+  }
 }
 /* Min width 576px to Max width 767px */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -3423,6 +3522,39 @@
   
   /* Contact Page Tablet Styles */
   .contact-area {
+    padding: 80px 20px !important;
+  }
+  
+  /* Courses Page Tablet Styles */
+  .courses-area {
+    padding: 40px 20px 80px !important;
+  }
+  
+  .single-course-box {
+    height: 220px !important;
+  }
+  
+  .single-course-box h3 {
+    font-size: 18px !important;
+  }
+  
+  .course-features-area {
+    padding: 80px 20px !important;
+  }
+  
+  .course-features-area .course-content {
+    padding-left: 15px !important;
+  }
+  
+  .course-features-area h2 {
+    font-size: 28px !important;
+  }
+  
+  .learning-process-area {
+    padding: 80px 20px !important;
+  }
+  
+  .why-choose-courses-area {
     padding: 80px 20px !important;
   }
 }
