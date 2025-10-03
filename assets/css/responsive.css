@@ -1,5 +1,13 @@
+/* Navbar spacer for responsive design */
+.navbar-spacer {
+  padding-bottom: 120px;
+}
+
 /* Max width 767px */
 @media only screen and (max-width: 767px) {
+  .navbar-spacer {
+    padding-bottom: 80px;
+  }
   body {
     font-size: 15px;
   }
@@ -1807,6 +1815,9 @@
 }
 /* Min width 768px to Max width 991px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar-spacer {
+    padding-bottom: 100px;
+  }
   body {
     font-size: 16px;
   }
