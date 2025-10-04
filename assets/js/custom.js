@@ -118,6 +118,7 @@
 		}
 	});
 
+
 	// Partners Slides
 	$('.partners-slides').owlCarousel({
 		nav: false,
@@ -158,6 +159,8 @@
 		}
 	});
 
+
+
 	// scrollCue
 	scrollCue.init();
 
@@ -176,23 +179,6 @@
         }
     });
 
-	// Features Slides
-    try {
-        window.addEventListener('DOMContentLoaded', () => {
-            const slides = document.querySelectorAll('.features-slides .slide');
-            for (let slide of slides) {
-                    slide.addEventListener('click', () => {
-                    clearActiveClasses();
-                    slide.classList.add('active');
-                });
-            }
-            function clearActiveClasses() { 
-				slides.forEach((slide) => {
-					slide.classList.remove('active');
-				});
-            }
-        });
-    } catch {}
 
 	// Go to Top
 	$(function(){
