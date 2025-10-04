@@ -260,6 +260,7 @@ Navbar Area CSS
   transition: var(--transition);
   padding-top: 20px;
   padding-bottom: 5px;
+  z-index: 999;
 }
 .navbar-area.is-sticky {
   z-index: 999;
