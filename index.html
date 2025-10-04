@@ -134,62 +134,70 @@
 
 
     <!-- Start Features Area -->
-    <div class="features-area pt-120 pb-95 position-relative z-1 border-top border-bottom bg-f6ffeb">
+    <div class="features-area  position-relative z-1 border-top border-bottom bg-f6ffeb">
         <div class="container">
             <div class="row justify-content-center" data-cues="slideInUp" data-group="featuresContent">
                 <div class="col-lg-3 col-sm-6">
-                    <div class="single-feature-box text-center mb-25 position-relative z-1">
-                        <h3 class="fw-semibold">
+                    <div class="feature-item text-center mb-25 position-relative z-1 d-flex flex-column justify-content-center align-items-center" style="padding: 25px; height: 200px;">
+                        <div class="icon mb-3" style="text-align: center;">
+                            <img src="assets/images/icons/expert.svg" alt="expert" style="width: 50px; height: 50px; display: block; margin: 0 auto;">
+                        </div>
+                        <h3 class="fw-semibold" style="color: var(--blackColor); font-size: 1.3rem;">
                             Expert-Led Training
                         </h3>
-                        <p class="mx-auto">
+                        <p class="mx-auto" style="color: var(--paragraphColor); font-size: 0.9rem;">
                             Learn from professionals
                         </p>
                         <a href="courses.html"
                             class="link-btn position-relative z-1 d-inline-block rounded-circle text-center">
-                            <img src="assets/images/icons/diagonal-arrow-right-up.svg" alt="diagonal-arrow-right-up">
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
-                    <div class="single-feature-box text-center mb-25 position-relative z-1">
-                        <h3 class="fw-semibold">
+                    <div class="feature-item text-center mb-25 position-relative z-1 d-flex flex-column justify-content-center align-items-center" style="padding: 25px; height: 200px;">
+                        <div class="icon mb-3" style="text-align: center;">
+                            <img src="assets/images/icons/learning.svg" alt="learning" style="width: 50px; height: 50px; display: block; margin: 0 auto;">
+                        </div>
+                        <h3 class="fw-semibold" style="color: var(--blackColor); font-size: 1.3rem;">
                             IT Solutions
                         </h3>
-                        <p class="mx-auto">
+                        <p class="mx-auto" style="color: var(--paragraphColor); font-size: 0.9rem;">
                             Innovative tech support
                         </p>
                         <a href="courses.html"
                             class="link-btn position-relative z-1 d-inline-block rounded-circle text-center">
-                            <img src="assets/images/icons/diagonal-arrow-right-up.svg" alt="diagonal-arrow-right-up">
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
-                    <div class="single-feature-box text-center mb-25 position-relative z-1">
-                        <h3 class="fw-semibold">
+                    <div class="feature-item text-center mb-25 position-relative z-1 d-flex flex-column justify-content-center align-items-center" style="padding: 25px; height: 200px;">
+                        <div class="icon mb-3" style="text-align: center;">
+                            <img src="assets/images/icons/small.svg" alt="small" style="width: 50px; height: 50px; display: block; margin: 0 auto;">
+                        </div>
+                        <h3 class="fw-semibold" style="color: var(--blackColor); font-size: 1.3rem;">
                             Internships
                         </h3>
-                        <p class="mx-auto">
+                        <p class="mx-auto" style="color: var(--paragraphColor); font-size: 0.9rem;">
                             Real-world experience
                         </p>
                         <a href="courses.html"
                             class="link-btn position-relative z-1 d-inline-block rounded-circle text-center">
-                            <img src="assets/images/icons/diagonal-arrow-right-up.svg" alt="diagonal-arrow-right-up">
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
-                    <div class="single-feature-box text-center mb-25 position-relative z-1">
-                        <h3 class="fw-semibold">
+                    <div class="feature-item text-center mb-25 position-relative z-1 d-flex flex-column justify-content-center align-items-center" style="padding: 25px; height: 200px;">
+                        <div class="icon mb-3" style="text-align: center;">
+                            <img src="assets/images/icons/expert.svg" alt="expert" style="width: 50px; height: 50px; display: block; margin: 0 auto;">
+                        </div>
+                        <h3 class="fw-semibold" style="color: var(--blackColor); font-size: 1.3rem;">
                             Placement Support
                         </h3>
-                        <p class="mx-auto">
+                        <p class="mx-auto" style="color: var(--paragraphColor); font-size: 0.9rem;">
                             Get now job ready
                         </p>
                         <a href="courses.html"
                             class="link-btn position-relative z-1 d-inline-block rounded-circle text-center">
-                            <img src="assets/images/icons/diagonal-arrow-right-up.svg" alt="diagonal-arrow-right-up">
                         </a>
                     </div>
                 </div>
@@ -869,7 +877,7 @@
             </div>
             <div class="copyright-area border-top">
                 <div class="row align-items-center justify-content-center">
-                    <div class="col-lg-6 col-sm-6">
+                    <div class="col-lg-3 col-sm-6">
                         <p class="mb-0">
                             © 2025 SkynovaSkills. All rights reserved.
                         </p>
@@ -940,21 +948,25 @@
 
     @media (max-width: 768px) {
         .hero-slideshow {
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
+            width: 350px;
+            margin: 0 auto;
         }
 
         .hero-slide {
-            width: 100vw;
-            height: 100vw;
-            max-height: 400px;
+            width: 350px;
+            height: 350px;
         }
     }
 
     @media (max-width: 480px) {
+        .hero-slideshow {
+            width: 350px;
+            margin: 0 auto;
+        }
+
         .hero-slide {
-            height: 100vw;
-            max-height: 350px;
+            width: 350px;
+            height: 350px;
         }
     }
     </style>
