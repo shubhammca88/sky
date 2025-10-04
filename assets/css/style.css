@@ -257,10 +257,9 @@ p:last-child {
 Navbar Area CSS
 =================================================*/
 .navbar-area {
-  z-index: 99;
   transition: var(--transition);
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding-top: 20px;
+  padding-bottom: 5px;
 }
 .navbar-area.is-sticky {
   z-index: 999;
@@ -488,8 +487,8 @@ Navbar Area CSS
 Banner Area CSS
 =================================================*/
 .banner-area {
-  padding-top: 205px;
-  padding-bottom: 120px;
+  padding-top: 130px;
+  padding-bottom: 30px;
 }
 .banner-area::before {
   top: 0;
@@ -513,24 +512,24 @@ Banner Area CSS
 }
 
 .banner-text {
-  text-align: end;
+  text-align: left;
   max-width: 935px;
 }
 .banner-text h1 {
   line-height: 1.24;
-  font-size: 72px;
+  font-size: 50px;
 }
 .banner-text h1 span:nth-child(2) {
-  text-align: start;
-  margin-left: -10px;
+  text-align: left;
+  margin-left: 0;
 }
 .banner-text h1 span:nth-child(3) {
-  margin-right: 5px;
+  margin-right: 0;
 }
 
 .banner-image {
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   position: relative;
   width: 100%;
 }
