@@ -343,6 +343,9 @@
   .single-feature-box .link-btn::before {
     margin: 4px;
   }
+  .feature-item {
+    margin-bottom: 15px !important;
+  }
   .features-slides .slide {
     flex: unset;
     height: auto;
