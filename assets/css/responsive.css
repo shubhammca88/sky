@@ -81,12 +81,12 @@
     margin-right: auto;
   }
   .navbar-area {
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: none;
     padding-top: 15px;
     padding-bottom: 15px;
   }
   .navbar-area.is-sticky {
-    border-bottom-width: 0;
+    border-bottom: 1px solid #eeeeee;
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -1946,7 +1946,7 @@
   
   /* Contact Page Mobile Styles */
   .contact-area {
-    padding: 60px 15px !important;
+    padding: 30px 15px !important;
   }
   
   .contact-area h2 {

@@ -1002,6 +1002,21 @@ Funfacts Area CSS
 /*================================================
 About Us Area CSS
 =================================================*/
+.about-us-area {
+  padding-top: 30px;
+}
+.main-services-area {
+  padding-top: 30px;
+}
+.courses-area {
+  padding-top: 30px;
+}
+.blog-area {
+  padding-top: 30px;
+}
+.contact-area {
+  padding-top: 30px;
+}
 .about-us-image {
   border-radius: 15px;
   margin-right: 18px;
