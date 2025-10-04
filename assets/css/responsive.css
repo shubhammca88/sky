@@ -191,7 +191,7 @@
     display: none;
   }
   .banner-area {
-    padding-top: 120px;
+    padding-top: 100px;
     padding-bottom: 10px;
   }
   .banner-area::before, .banner-area::after {
@@ -214,14 +214,14 @@
     margin-right: 0;
   }
   .banner-image {
-    margin-top: 22px;
-    margin-bottom: 22px;
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%;
-    overflow: hidden;
-    border-radius: 30px;
-  }
+   margin-top: 22px;
+   margin-bottom: 0;
+   position: relative;
+   width: 100%;
+   padding-bottom: 100%;
+   overflow: hidden;
+   border-radius: 30px;
+ }
   .banner-image .hero-slideshow {
     position: absolute;
     top: 0;
@@ -244,7 +244,7 @@
     opacity: 1;
   }
   .banner-content .btn-box {
-    margin-top: 22px;
+    margin-top: 0;
   }
   .banner-content .btn-box .video-btn {
     margin-left: 15px;
