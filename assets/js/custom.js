@@ -8,7 +8,7 @@
 
 	// Header Sticky
 	$(window).on('scroll',function() {
-		if ($(this).scrollTop() > 120){  
+		if ($(this).scrollTop() > 0){
 			$('.navbar-area').addClass("is-sticky");
 		}
 		else{
