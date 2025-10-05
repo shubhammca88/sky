@@ -94,7 +94,12 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8">
                     <div class="bg-white p-3 p-md-4 rounded-4 shadow">
-                        <form class="registration-form" enctype="multipart/form-data">
+                        <div id="success-message" class="alert alert-success" style="display:none;">
+                            <h4>Registration Successful!</h4>
+                            <p>Your registration has been submitted successfully. We will contact you soon.</p>
+                        </div>
+                        <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;"></iframe>
+                        <form class="registration-form" action="https://script.google.com/macros/s/AKfycbwuiYg5fG4ibg5kFzJpNkjOiKXOWJBiztZnfBTe081hGpZyCPjcfz9hChM-9ibQmqVDoA/exec" method="post" target="hidden_iframe">
                             <!-- Personal Details -->
                             <div class="form-section mb-4 mb-md-5">
                                 <h3 class="fw-semibold mb-3 mb-md-4 fs-6 fs-md-5">Personal Details</h3>
@@ -140,14 +145,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-6">
-                                        <div class="form-group mb-3">
-                                            <label class="form-label">Photograph Upload *</label>
-                                            <input type="file" name="photograph" class="form-control" accept="image/*"
-                                                required>
-                                            <small class="form-text text-muted">Upload image only</small>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
 
@@ -364,22 +362,28 @@
                                     <div class="col-12 col-md-4">
                                         <div class="form-group mb-3">
                                             <label class="form-label">Aadhaar / ID Proof *</label>
-                                            <input type="file" name="id_proof" class="form-control"
-                                                accept=".pdf,.jpg,.png" required>
+                                            <input type="file" name="id_proof" class="form-control" accept=".pdf,.jpg,.png" required>
+                                            <input type="hidden" name="id_proof_data">
+                                            <input type="hidden" name="id_proof_filename">
+                                            <input type="hidden" name="id_proof_type">
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-4">
                                         <div class="form-group mb-3">
                                             <label class="form-label">Qualification Certificate *</label>
-                                            <input type="file" name="qualification_cert" class="form-control"
-                                                accept=".pdf,.jpg,.png" required>
+                                            <input type="file" name="qualification_cert" class="form-control" accept=".pdf,.jpg,.png" required>
+                                            <input type="hidden" name="qualification_cert_data">
+                                            <input type="hidden" name="qualification_cert_filename">
+                                            <input type="hidden" name="qualification_cert_type">
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-4">
                                         <div class="form-group mb-3">
                                             <label class="form-label">Any Other Documents</label>
-                                            <input type="file" name="supporting_docs" class="form-control"
-                                                accept=".pdf,.jpg,.png">
+                                            <input type="file" name="supporting_docs" class="form-control" accept=".pdf,.jpg,.png">
+                                            <input type="hidden" name="supporting_docs_data">
+                                            <input type="hidden" name="supporting_docs_filename">
+                                            <input type="hidden" name="supporting_docs_type">
                                         </div>
                                     </div>
                                 </div>
@@ -570,6 +574,46 @@
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/scrollCue.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    
+    <script>
+    document.querySelector('.registration-form').addEventListener('submit', function(e) {
+        const submitBtn = document.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Submitting...';
+        submitBtn.disabled = true;
+
+        setTimeout(function() {
+            document.querySelector('.registration-form').style.display = 'none';
+            document.querySelector('#success-message').style.display = 'block';
+            window.scrollTo(0, 0);
+        }, 2000);
+    });
+
+    // File handling with base64 encoding and size validation (max 1MB)
+    ['id_proof', 'qualification_cert', 'supporting_docs'].forEach(function(name) {
+        document.querySelector('input[name="' + name + '"]').addEventListener('change', function() {
+            var file = this.files[0];
+            if (file) {
+                if (file.size > 1048576) {
+                    alert('File size must be less than 1MB');
+                    this.value = '';
+                    return;
+                }
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    var data = e.target.result;
+                    var base64 = data.split(',')[1];
+                    document.querySelector('input[name="' + name + '_data"]').value = base64;
+                    document.querySelector('input[name="' + name + '_filename"]').value = file.name;
+                    document.querySelector('input[name="' + name + '_type"]').value = file.type;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+    </script>
+    
+
 
 </body>
 
