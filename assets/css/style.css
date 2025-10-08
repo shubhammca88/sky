@@ -4139,4 +4139,192 @@ Go Top CSS
 }
 .go-top:hover {
   background-color: var(--primaryColor) !important;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* Additional styles from index.html */
+
+.hero-slideshow {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hero-slide.active {
+    position: relative;
+    opacity: 1;
+}
+
+/* Service Box Hover Effects */
+.service-box:hover {
+    border-color: #333 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.service-box:hover .service-icon i {
+    transform: scale(1.05);
+}
+
+.service-icon i {
+    transition: transform 0.3s ease;
+}
+
+/* Course Box Hover Effects */
+.single-course-box:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.single-course-box:hover .fw-semibold {
+    transform: scale(1.05);
+}
+
+.single-course-box .fw-semibold {
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hero-slideshow {
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    .hero-slide {
+        width: 350px;
+        height: 350px;
+    }
+
+    .service-box {
+        height: auto !important;
+        min-height: 140px;
+    }
+
+    .about-image img {
+        max-width: 250px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-slideshow {
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    .hero-slide {
+        width: 350px;
+        height: 350px;
+    }
+
+    .service-box {
+        height: auto !important;
+        min-height: 130px;
+    }
+
+    .about-image img {
+        max-width: 200px !important;
+    }
+}
+
+/* Inline style classes */
+.custom-para-large {
+    color: var(--paragraphColor);
+    font-size: 1.1rem;
+}
+
+.service-box-inline {
+    border: 1px solid #e0e0e0;
+    border-radius: 35px;
+    background: white;
+    transition: all 0.3s ease;
+    height: 70px;
+}
+
+.service-h4 {
+    color: var(--blackColor);
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+.service-p {
+    color: var(--paragraphColor);
+    font-size: 0.75rem;
+}
+
+.course-box-common {
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
+.course-box-full {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.course-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%);
+    border-radius: inherit;
+}
+
+.course-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: left;
+}
+
+.course-link {
+    color: white;
+}
+
+.feature-item-inline {
+    padding: 25px;
+    height: 180px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.feature-icon-div {
+    text-align: center;
+}
+
+.feature-icon-img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.feature-h3 {
+    color: var(--blackColor);
+    font-size: 1.1rem;
+}
+
+.feature-p {
+    color: var(--paragraphColor);
+    font-size: 0.9rem;
+}
+
+.section-title-h2 {
+    color: var(--blackColor);
+}
+
+/*# sourceMappingURL=style.css.map */
