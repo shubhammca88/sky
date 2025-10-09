@@ -194,4 +194,65 @@
 		});
 	});
 
+	// Hero Slideshow
+	document.addEventListener('DOMContentLoaded', function () {
+		const slides = document.querySelectorAll('.hero-slide');
+		let currentSlide = 0;
+
+		function showNextSlide() {
+			slides[currentSlide].classList.remove('active');
+			currentSlide = (currentSlide + 1) % slides.length;
+			slides[currentSlide].classList.add('active');
+		}
+
+		// Change slide every 3 seconds
+		setInterval(showNextSlide, 3000);
+	});
+
+
+	// Registration form handling
+	document.addEventListener('DOMContentLoaded', function() {
+		const registrationForm = document.querySelector('.registration-form');
+		if (registrationForm) {
+			registrationForm.addEventListener('submit', function(e) {
+				const submitBtn = document.querySelector('button[type="submit"]');
+				const originalText = submitBtn.textContent;
+				submitBtn.textContent = 'Submitting...';
+				submitBtn.disabled = true;
+
+				setTimeout(function() {
+					document.querySelector('.registration-form').style.display = 'none';
+					document.querySelector('#success-message').style.display = 'block';
+					window.scrollTo(0, 0);
+				}, 2000);
+			});
+
+			// File handling with base64 encoding and size validation (max 1MB)
+			['id_proof', 'qualification_cert', 'supporting_docs'].forEach(function(name) {
+				const input = document.querySelector('input[name="' + name + '"]');
+				if (input) {
+					input.addEventListener('change', function() {
+						var file = this.files[0];
+						if (file) {
+							if (file.size > 1048576) {
+								alert('File size must be less than 1MB');
+								this.value = '';
+								return;
+							}
+							var reader = new FileReader();
+							reader.onload = function(e) {
+								var data = e.target.result;
+								var base64 = data.split(',')[1];
+								document.querySelector('input[name="' + name + '_data"]').value = base64;
+								document.querySelector('input[name="' + name + '_filename"]').value = file.name;
+								document.querySelector('input[name="' + name + '_type"]').value = file.type;
+							};
+							reader.readAsDataURL(file);
+						}
+					});
+				}
+			});
+		}
+	});
+
 }(jQuery));
