@@ -220,11 +220,21 @@
 				submitBtn.textContent = 'Submitting...';
 				submitBtn.disabled = true;
 
-				setTimeout(function() {
-					document.querySelector('.registration-form').style.display = 'none';
-					document.querySelector('#success-message').style.display = 'block';
-					window.scrollTo(0, 0);
-				}, 2000);
+				const hiddenIframe = document.querySelector('iframe[name="hidden_iframe"]');
+				if (hiddenIframe) {
+					hiddenIframe.addEventListener('load', function() {
+						document.querySelector('.registration-form').style.display = 'none';
+						document.querySelector('#success-message').style.display = 'block';
+						window.scrollTo(0, 0);
+					});
+				} else {
+					// Fallback if iframe not found
+					setTimeout(function() {
+						document.querySelector('.registration-form').style.display = 'none';
+						document.querySelector('#success-message').style.display = 'block';
+						window.scrollTo(0, 0);
+					}, 2000);
+				}
 			});
 
 			// File handling with base64 encoding and size validation (max 1MB)
